@@ -1,0 +1,228 @@
+::selection {
+  color: none;
+  background: none;
+}
+/* For Mozilla Firefox */
+::-moz-selection {
+  color: none;
+  background: none;
+}
+img {
+  max-width: 98%;
+  height: auto;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(45deg, rgb(255, 77, 0), rgb(255, 225, 0));
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 15px 1px rgba(109, 49, 0, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 10px;
+  gap: 1rem;
+}
+.loader {
+  place-items: center;
+}
+.header {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 15px 1px rgba(109, 49, 0, 0.25);
+  backdrop-filter: blur(5px);
+  padding: 0.4rem 1rem;
+  border-radius: 7px;
+  margin: 0.4rem 0.7rem;
+  text-align: center;
+}
+.header .title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #c75600ff;
+  text-shadow: 0px 1px 1px rgb(253, 255, 238);
+}
+.countBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px solid #c75600ff;
+  padding-left: 2rem;
+  color: #c75600ff;
+}
+.countBox label {
+  font-size: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+.countBox .count {
+  font-weight: bold;
+}
+.flip-card {
+  position: relative;
+  user-select: none;
+  width: 100px;
+  height: 100px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card-inner.flip {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+  overflow: hidden;
+  background-color: rgb(255, 251, 245);
+  outline: 3px solid rgb(255, 251, 245);
+  box-shadow: 0 1px rgba(53, 53, 53, 0.1);
+  cursor: pointer;
+  pointer-events: all;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+.flip-card-front {
+  background-color: rgb(255, 198, 105);
+}
+.qnmarkImg {
+  width: 60px;
+  height: 60px;
+}
+
+.errorMsg {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  color: rgba(126, 44, 0, 0.94);
+  text-shadow: 3px 1px 1px rgb(229, 202, 81);
+  background: linear-gradient(45deg, #ffcc27bc, #ffc400b2);
+  border-radius: 7px;
+  box-shadow: 0 3px 10px rgba(118, 62, 6, 0.305);
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  margin: 0 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.info {
+  position: absolute;
+  width: 20px;
+  bottom: 0px;
+  right: 0px;
+  box-shadow: px 5px rgba(53, 53, 53, 0.1);
+  background-color: rgb(255, 251, 245);
+  border-radius: 7px 0 0 0;
+  padding: 1px 0 0 1px;
+}
+
+.footer {
+  color: #eeff6f;
+  font-size: 0.9rem;
+  margin: 1rem 0 0.4rem;
+  letter-spacing: 1px;
+}
+.footer a {
+  color: #eeff6f;
+}
+
+/*  Remvoing the Blue highlighting from elements */
+.noSelect {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.noSelect:focus {
+  outline: none !important;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 500px) {
+  .flip-card {
+    width: 90px;
+    height: 90px;
+  }
+  .qnmarkImg {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 425px) {
+  .flip-card {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 400px) {
+  .flip-card {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (max-width: 360px) {
+  .flip-card {
+    width: 65px;
+    height: 65px;
+  }
+}
