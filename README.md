@@ -4,7 +4,9 @@ Chick Flick Memory Card Game is a fun and interactive game built using React. Te
 
 ## Demo
 Check out the live demo of the Chick Flick Memory Card Game: [Play Here](https://chick-flick.netlify.app/)
-![Chick Flick Memory Card Game](https://github.com/mindsofraj/Chick-Flick-Game/blob/master/screenshots/preview1.png)
+![Chick Flick Memory Card Game](https://github.com/mindsofraj/Chick-Flick-Game/assets/76028896/217de23d-facb-43d3-9e7f-cb1efac91b28)
+
+
 
 ## Features
 - Dynamic card images fetched using the TMDB API.
@@ -18,5 +20,5 @@ Check out the live demo of the Chick Flick Memory Card Game: [Play Here](https:/
 
 
 ## Enjoy the nostalgia and fun of chick flicks while sharpening your memory! 🍿🎬🃏
-![Chick Flick Memory Card Game](https://github.com/mindsofraj/Chick-Flick-Game/blob/master/screenshots/preview.png)
+![Chick Flick Memory Card Game](https://github.com/mindsofraj/Chick-Flick-Game/assets/76028896/f749f8fa-f1e9-47a2-969b-caae2f25d4ac)
 
